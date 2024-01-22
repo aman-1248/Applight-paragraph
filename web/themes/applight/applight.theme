@@ -1,0 +1,17 @@
+<?php
+
+
+  
+function applight_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  
+    if ($form_id == 'contact_message_feedback_form') {
+       
+
+         $form['actions']['submit']['#value'] = t('Submit');
+     
+        $form['actions']['submit']['#attributes']['class'][] = 'btn-grad w-100 text-uppercase';
+        
+    
+      
+    }
+}
